@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <hr/>
+    <h2 class="page-header">{{ destinations.desname }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item">Memory: {{ destinations.memory }}</li>
+        <li class="list-group-item">Address: {{ destinations.Address }}</li>
+        <li class="list-group-item">Date: <strong>{{ destinations.date|date('F j,Y, g:i a') }}</strong></li>
+        <li class="list-group-item">Image:<img src="{{ asset('upload/destiImages/' ~ destinations.Image) }}" style="width: 1000px; height: 500px"></li>
+    </ul>
+    <a href="{{ path('desti_list') }}" class="btn btn-lg btn-secondary">Back to Storage</a>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="card" style="padding: 20px;margin-top: 70px">
+    {{ form_start(form) }}
+    <div class="form-group">
+        <label for="area">Area</label>
+        {{ form_widget(form.area,{
+            'attr':{
+                'class':'form-control'
+            }
+        }) }}
+    </div>
+    <div class="form-group">
+        <label for="area">Destination Name:</label>
+        {{ form_widget(form.desname,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Destination name'
+            }
+        }) }}
+    </div>
+    <div class="form-group">
+        <label for="area">Memory:</label>
+        {{ form_widget(form.memory,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Memory'
+            }
+        }) }}
+    </div>
+    <div class="form-group">
+        <label for="Address">Address:</label>
+        {{ form_widget(form.address,{
+            'attr':{
+                'class':'form-control',
+                'placeholder': 'Address'
+            }
+        }) }}
+    </div>
+
+    <div class="form-group">
+        <label for="date">Date</label>
+        {{ form_widget(form.date,{
+            'attr':{
+                'class':'form-control'
+            }
+        }) }}
+    </div>
+    <div class="form-group">
+        <label for="date">Image</label>
+        {{ form_widget(form.Image,{'attr':{
+            'class':'form-control'
+        }
+        }) }}
+    </div>
+    <input type="submit" name="create destination" value="Create" class="btn btn-primary"/>
+    {{ form_end(form) }}
+</div>
+{% endblock %}
+

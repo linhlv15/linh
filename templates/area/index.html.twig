@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+<div class="form-group">
+    <label for="area">Area</label>
+    {{ form_widget(form.areaname,{
+        'attr':{
+            'class':'form-control'
+        }
+    }) }}
+    <input type="submit" name="create area" value="Create" class="btn btn-primary"/>
+    {{ form_end(form) }}
+    {% endblock %}
